@@ -3,6 +3,7 @@
     width: 30%;
     margin-left: 4px;
     width: 106px;
+    position: relative;
     
 }
 .container-fluid {
@@ -40,11 +41,7 @@ img.d-block.w-100 {
 
 
 
-.container {
-    position: relative;
-}
-
-.container .card {
+.col .card {
     position: relative;
     width: 250px;
     height: 350px;
@@ -53,6 +50,8 @@ img.d-block.w-100 {
     overflow: hidden;
     display: flex;
     float: left;
+    justify-content: center;
+    align-items: center;
 }
 .card {
     flex: 1; /* Distribuye el espacio de manera equitativa entre las tarjetas */
@@ -60,7 +59,7 @@ img.d-block.w-100 {
     float: left;
 }
 
-.container .card:before {
+.col .card:before {
     content: "";
     position: absolute;
     top: 0;
@@ -72,11 +71,11 @@ img.d-block.w-100 {
     transition: 0.5s ease-in-out;
 }
 
-.container .card:hover:before {
+.col .card:hover:before {
     clip-path: circle(300px at 80% -20%);
 }
 
-.container .card:after {
+.col .card:after {
     content: "Luigy";
     position: absolute;
     top: 50%;
@@ -88,23 +87,23 @@ img.d-block.w-100 {
 
 }
 
-.container .card .imgBx {
+.col .card .imgBx {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 70%;
+    transform: translateY(-60%);
     z-index: 1000;
     width: 100%;
     height: 100%;
     transition: .5s;
 }
 
-.container .card:hover .imgBx {
+.col .card:hover .imgBx {
     top: 0%;
     transform: translateY(-25%);
     /* bug  */
 }
 
-.container .card .imgBx img {
+.col .card .imgBx img {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -112,7 +111,7 @@ img.d-block.w-100 {
     width: 100px;
 }
 
-.container .card .contentBx {
+.col .card .contentBx {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -122,11 +121,11 @@ img.d-block.w-100 {
     z-index: 90;
 }
 
-.container .card:hover .contentBx {
+.col .card:hover .contentBx {
     height: 210px;
 }
 
-.container .card .contentBx h2 {
+.col .card .contentBx h2 {
     position: relative;
     font-weight: 650;
     letter-spacing: 1px;
@@ -134,8 +133,8 @@ img.d-block.w-100 {
     font-size: 20px;
 }
 
-.container .card .contentBx .size,
-.container .card .contentBx .color {
+.col .card .contentBx .size,
+.col .card .contentBx .color {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,20 +144,20 @@ img.d-block.w-100 {
     visibility: hidden;
 }
 
-.container .card:hover .contentBx .size {
+.col .card:hover .contentBx .size {
     opacity: 1;
     visibility: visible;
     transition-delay: .5s;
 }
 
-.container .card:hover .contentBx .color {
+.col .card:hover .contentBx .color {
     opacity: 1;
     visibility: visible;
     transition-delay: .6s;
 }
 
-.container .card .contentBx .size h3,
-.container .card .contentBx .color h3 {
+.col .card .contentBx .size h3,
+.col .card .contentBx .color h3 {
     color: white;
     font-weight: 100;
     font-size: 7px;
@@ -167,7 +166,7 @@ img.d-block.w-100 {
     margin-right: 10px;
 }
 
-.container .card .contentBx .size span {
+.col .card .contentBx .size span {
     width: 15px;
     height: 20px;
     text-align: center;
@@ -183,11 +182,11 @@ img.d-block.w-100 {
     cursor: pointer;
 }
 
-.container .card .contentBx .size span:hover {  /* other bug */
+.col .card .contentBx .size span:hover {  /* other bug */
     background: #B90000;
 }
 
-.container .card .contentBx .color span {
+.col .card .contentBx .color span {
     width: 15px;
     height: 15px;
     background: #ff0;
@@ -196,7 +195,7 @@ img.d-block.w-100 {
     cursor: pointer;
 }
 
-.container .card .contentBx .color span:nth-child(2) {
+.col .card .contentBx .color span:nth-child(2) {
      background: #d40e0e;
 }
 
@@ -204,11 +203,11 @@ img.d-block.w-100 {
      background: #1B2FE9;
 }
 
-.container .card .contentBx .color span:nth-child(4) {
+.col .card .contentBx .color span:nth-child(4) {
      background: #000000;
 }
 
-.container .card .contentBx a {
+.col .card .contentBx a {
     display: inline-block;
     padding: 5px 10px;
     background: #fff;
@@ -222,7 +221,7 @@ img.d-block.w-100 {
     transition: .5s;
 }
 
-.container .card:hover .contentBx a {
+.col .card:hover .contentBx a {
     opacity: 1;
     transform: translateY(0px);
     transition-delay: .7s;
